@@ -16,6 +16,11 @@ const Navigator = ({
                ref={(node) => {
                  input = node;
                }}
+               onKeyPress={(key) => {
+                 if (key.key === 'Enter') {
+                   onSendRequest(input.value);
+                 }
+               }}
         />
       </div>
 
