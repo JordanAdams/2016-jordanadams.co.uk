@@ -9,6 +9,7 @@ const Home = ({
   return (
     <div>
       <header>
+        <img src="/dist/images/avatar.jpg" />
         <h1>Jordan Adams</h1>
         <p>100% Organic Developer. Made in Britain.</p>
       </header>
