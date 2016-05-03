@@ -33,7 +33,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onSendRequest: (endpoint) => dispatch(fetchApi(endpoint))
+    onSendRequest: (endpoint = '') => dispatch(fetchApi(endpoint))
   };
 };
 

@@ -11,7 +11,7 @@ const fetchApiSuccess = (status, body) => {
   };
 };
 
-const fetchApi = (endpoint) => {
+const fetchApi = (endpoint = '') => {
   return (dispatch) => {
     dispatch(fetchApiStart());
 
