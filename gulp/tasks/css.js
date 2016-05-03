@@ -3,9 +3,7 @@ const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
 const cssnext = require('postcss-cssnext');
-const partialImport = require('postcss-partial-import');
 const normalize = require('postcss-normalize');
-const clearfix = require('postcss-clearfix');
 const browsersync = require('browser-sync');
 const config = require('../config');
 
@@ -15,9 +13,7 @@ module.exports = () => {
     .pipe(sourcemaps.init())
     .pipe(postcss([
       normalize,
-      partialImport({prefix: ''}),
-      cssnext,
-      clearfix
+      cssnext
     ]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.css.dest))

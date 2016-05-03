@@ -10,6 +10,7 @@
     "test": "ava -r babel-register"
   },
   "dependencies": {
+    "gulp-imagemin": "^2.4.0",
     "isomorphic-fetch": "^2.2.1",
     "proxyquire": "^1.7.4",
     "react": "^15.0.1",

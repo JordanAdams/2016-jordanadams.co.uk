@@ -8,5 +8,9 @@ module.exports = {
     entries: ['./src/js/app.js'],
     dest: './dist/',
     watch: './src/js/**/*.js'
+  },
+  images: {
+    src: './src/images/**/*',
+    dest: './dist/images/'
   }
 };
