@@ -40,6 +40,7 @@
     "gulp-postcss": "^6.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.0.0-alpha",
+    "minifyify": "^7.3.3",
     "postcss-clearfix": "^1.0.0",
     "postcss-cssnext": "^2.5.2",
     "postcss-import": "^8.1.0",
@@ -56,10 +57,5 @@
       "browser"
     ],
     "space": 2
-  },
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
   }
 }
