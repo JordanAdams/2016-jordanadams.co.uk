@@ -1,5 +1,9 @@
 import fetch from 'isomorphic-fetch';
 
+const apiUrl = process.env.API_URL;
+
+console.log(apiUrl);
+
 const fetchApiStart = () => {
   return {type: 'FETCH_API_REQUEST'};
 };
@@ -16,7 +20,7 @@ const fetchApi = (endpoint = '') => {
     dispatch(fetchApiStart());
 
     try {
-      const res = await fetch(`http://localhost:3002/${endpoint}`);
+      const res = await fetch(`${apiUrl}${endpoint}`);
       const status = res.status;
       const body = await res.text();
       dispatch(fetchApiSuccess(status, body));

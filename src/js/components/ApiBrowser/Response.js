@@ -14,12 +14,15 @@ const Response = ({
   body
 }) => {
   const statusMessage = httpStatuses[status] || 'Unknown';
-  const output = `${status} - ${statusMessage}\n\n${formatJSON(body)}`;
 
   return (
     <div className="response">
       <pre>
-        <code>{output}</code>
+        <code>
+          {status} ({statusMessage})
+          {'\n\n'}
+          {formatJSON(body)}
+        </code>
       </pre>
     </div>
   );
