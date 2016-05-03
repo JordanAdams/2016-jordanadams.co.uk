@@ -12,15 +12,17 @@ const fetchApiSuccess = (status, body) => {
 };
 
 const fetchApi = (endpoint = '') => {
-  return (dispatch) => {
+  return async function (dispatch) {
     dispatch(fetchApiStart());
 
-    fetch(`http://localhost:3002/${endpoint}`)
-      .then(res => res.text())
-      .then(body => {
-        dispatch(fetchApiSuccess(200, body));
-      })
-      .catch(err => console.error(err));
+    try {
+      const res = await fetch(`http://localhost:3002/${endpoint}`);
+      const status = res.status;
+      const body = await res.text();
+      dispatch(fetchApiSuccess(status, body));
+    } catch (err) {
+      console.error(err);
+    }
   };
 };
 
