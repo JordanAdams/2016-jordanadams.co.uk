@@ -2,8 +2,6 @@ import fetch from 'isomorphic-fetch';
 
 const apiUrl = process.env.API_URL;
 
-console.log(apiUrl);
-
 const fetchApiStart = () => {
   return {type: 'FETCH_API_REQUEST'};
 };
